@@ -1,0 +1,383 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+
+.container{
+    width: 1400px;
+}
+
+$electonic:#005ff9;
+$gray:#919399;
+$black:#2C2D2E;
+
+%default_font{
+    font-family: OpenSans;
+    font-style: normal;
+    font-weight: 400;
+}
+
+/* popups */
+.popups{
+    transition: 1s;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100%;
+    background-color: rgba(#000, .3);
+    padding-bottom: 50px;
+    .container{
+        margin-top: 15vh;
+        box-sizing: border-box;
+        padding: 36px;
+        background-color: #fff;
+        .form.hide{
+            display: none;
+        }
+        .form.show{
+            display: block;
+        }
+        .form_title{
+            @extend %default_font;
+            font-size: 36px;
+            color: $black;
+            margin-bottom: 48px;
+        }
+        #form_head{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            a{
+                text-decoration: none;
+                width: 33px;
+                height: 33px;
+                &:hover{
+                    transition: .2s;
+                    width: 36px;
+                    height: 36px;
+                }
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+        form{
+            #input_cont{
+                margin-bottom: 48px;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: repeat(6, 1fr) .5fr;
+                grid-column-gap: 98px;
+                grid-row-gap: 24px;
+                grid-template-areas:
+                "First_Name Position_cont"
+                "Last_Name Company_Name"
+                "E_mail E_mail"
+                "Telephone_number1 Telephone_number1"
+                "Telephone_number2 Telephone_number2"
+                "Telephone_number3 Telephone_number3"
+                "button_cont button_cont";
+                .form_cont{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    width: 427px;
+                    h1{
+                        @extend %default_font;
+                        font-size: 20px;
+                        color: $black;
+                    }
+                    input{
+                        transition: 1s;
+                        padding: 8px;
+                        border: 1px solid $gray;
+                        @extend %default_font;
+                        font-size: 16px;
+                        color: $black;
+                    }
+                    input.error{
+                        border: 1px solid red;
+                        background-color: rgb(247, 173, 173);
+
+                    }
+                    input.error::placeholder{
+                        color: red;
+                    }
+                }
+            }
+
+            #button_cont{
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                button{
+                    @extend %default_font;
+                    font-size: 24px;
+                    color: $electonic;
+                    padding: 8px 16px;
+                    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.24);
+                    border: none;
+                    background-color: #fff;
+                    border-radius: 8px;
+                    &:hover{
+                        transition: .2s;
+                        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.12);
+                        color: #418aff;
+                    }
+                }
+            }
+            #First_Name{grid-area: First_Name;}
+            #Last_Name{grid-area: Last_Name;}
+            #E_mail{grid-area: E_mail;}
+            #Telephone_number1{grid-area: Telephone_number1;}
+            #Telephone_number2{grid-area: Telephone_number2;}
+            #Telephone_number3{grid-area: Telephone_number3;}
+            #Position{grid-area: Position_cont;}
+            #Company_Name{grid-area: Company_Name;}
+            #button_cont{grid-area: button_cont;}
+        }
+    }
+}
+.popups.hide{
+    display: none;
+}
+.popups.show{
+    display: block;
+}
+
+/* header */
+header{
+    margin-top: 64px;
+    margin-bottom: 54px;
+    .wrapper .container{
+        display: flex;
+        justify-content: flex-end;
+        a{
+            @extend %default_font;
+            font-size: 16px;
+
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 8px;
+            color:  $electonic;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.24);
+            &:hover{
+                transition: .4s;
+                color: #418aff;
+                box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.12);
+            }
+        }
+    }
+}
+/* content */
+#content{
+    .accaunt{
+        width: 100%;
+        padding: 18px 36px 54px 18px;
+        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.12);
+        margin-bottom: 36px;
+
+        box-sizing: border-box;
+        display: grid;
+        grid-template-rows: 1fr;
+        grid-template-columns: .5fr .5fr .5fr .7fr .7fr .3fr .7fr .5fr;
+        grid-template-areas: "Account_ID First_Name Last_Name E_mail Company_name Position_block Telephone_number buttons_block";
+        grid-column-gap: 16px;
+        
+        #Account_ID{grid-area: Account_ID;}
+        #First_Name{grid-area: First_Name;}
+        #Last_Name{grid-area: Last_Name;}
+        #E_mail{grid-area: E_mail;}
+        #Company_name{grid-area: Company_name;}
+        #Position{grid-area: Position_block;}
+        #Telephone_number{grid-area: Telephone_number;}
+
+        .info_block{
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+
+            h1{
+                @extend %default_font;
+                color: $gray;
+                font-size: 14px;
+                margin-bottom: 12px
+
+            }
+            h2{
+                @extend %default_font;
+                color: $black;
+                font-size: 16px;
+                margin-bottom: 4px
+            }
+        }
+        .buttons_block{
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            grid-area: buttons_block;
+            a{
+                width: 33px;
+                height: 33px;
+                text-decoration: none;
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+            a.edit{
+                margin-right: 24px;
+            }
+        }
+    }
+}
+
+/* pages */
+.page_number_cont{
+    margin-bottom: 60px;
+    a{
+        text-decoration: none;
+        @extend %default_font;
+        font-weight: 700;
+        color: $black;
+        font-size: 24px;
+        margin-right: 12px;
+        &:hover{
+            transition: .2s;
+            text-decoration: underline;
+            color: red;
+        }
+    }
+}
+
+
+
+/* media */
+@media(max-width:1440px){
+    .container{
+        max-width: 970px;
+    }
+    /* popups */
+    .popups{
+        .container{
+            form{
+                #input_cont{
+                    grid-column-gap: 48px;
+                }
+            }
+        }
+    }
+    /* content */
+    #content{
+        .accaunt{
+            grid-template-columns: .35fr .35fr .35fr .55fr .65fr .3fr .7fr .3fr;
+        }
+    }
+}
+
+@media(max-width:992px){
+    .container{
+        max-width: 750px;
+    }
+    /* popups */
+    .popups .container form #input_cont{
+        grid-column-gap: 36px;
+        .form_cont{
+            width: 300px;
+            h1{
+                margin-right: 6px;
+            }
+        }
+    }
+    /* content */
+    #content{
+        .accaunt{
+            grid-template-rows: 1fr 1fr;
+            grid-template-columns: .5fr 1fr 1fr 1fr;
+            grid-template-areas: "Account_ID First_Name Last_Name  buttons_block"
+            "Position_block E_mail Company_name Telephone_number ";
+        }
+    }
+}
+
+@media(max-width:767px){
+    .container{
+        max-width: none;
+        padding: 0 10px;
+    }
+    /* popups */
+    .popups .container{
+        padding: 24px 10px;
+        form #input_cont{
+            display: flex;
+            flex-direction: column;
+            .form_cont{
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                input{
+                    min-width: 100px;
+                }
+            }
+        }
+    }
+    /* content */
+    #content{
+        .accaunt{
+            padding: 8px 16px;
+            grid-template-rows: .8fr 1fr .3fr;
+            grid-template-columns: .8fr 1fr 1fr;
+            grid-template-areas: "Account_ID Company_name buttons_block"
+            "First_Name Last_Name E_mail"
+            "Position_block Telephone_number Telephone_number";
+            grid-row-gap: 16px;
+            grid-column-gap: 16px;
+        }
+    }
+}
+
+@media(max-width:300px){
+    .container{
+        max-width: none;
+        padding: 0 10px;
+    }
+    /* popups */
+    .popups .container form #input_cont{
+        display: flex;
+        flex-direction: column;
+        .form_cont{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            input{
+                min-width: 100px;
+            }
+        }
+    }
+    
+    /* content */
+    #content{
+        .accaunt{
+            padding: 6px;
+            grid-template-rows: .8fr 1fr .3fr;
+            grid-template-columns: .5fr 1fr 1fr;
+            grid-template-areas: "Account_ID Company_name buttons_block"
+            "First_Name Last_Name E_mail"
+            "Position_block Telephone_number Telephone_number";
+            grid-row-gap: 16px;
+            grid-column-gap: 12px;
+        }
+    }
+}

@@ -1,0 +1,547 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.container {
+  width: 1400px;
+}
+
+.popups .container .form_title, .popups .container form #input_cont .form_cont h1, .popups .container form #input_cont .form_cont input, .popups .container form #button_cont button, header .wrapper .container a, #content .accaunt .info_block h1, #content .accaunt .info_block h2, .page_number_cont a {
+  font-family: OpenSans;
+  font-style: normal;
+  font-weight: 400;
+}
+
+/* popups */
+.popups {
+  -webkit-transition: 1s;
+  transition: 1s;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  padding-bottom: 50px;
+}
+
+.popups .container {
+  margin-top: 15vh;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 36px;
+  background-color: #fff;
+}
+
+.popups .container .form.hide {
+  display: none;
+}
+
+.popups .container .form.show {
+  display: block;
+}
+
+.popups .container .form_title {
+  font-size: 36px;
+  color: #2C2D2E;
+  margin-bottom: 48px;
+}
+
+.popups .container #form_head {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.popups .container #form_head a {
+  text-decoration: none;
+  width: 33px;
+  height: 33px;
+}
+
+.popups .container #form_head a:hover {
+  -webkit-transition: .2s;
+  transition: .2s;
+  width: 36px;
+  height: 36px;
+}
+
+.popups .container #form_head a img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.popups .container form #input_cont {
+  margin-bottom: 48px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: (1fr)[6] 0.5fr;
+      grid-template-rows: repeat(6, 1fr) 0.5fr;
+  grid-column-gap: 98px;
+  grid-row-gap: 24px;
+      grid-template-areas: "First_Name Position_cont" "Last_Name Company_Name" "E_mail E_mail" "Telephone_number1 Telephone_number1" "Telephone_number2 Telephone_number2" "Telephone_number3 Telephone_number3" "button_cont button_cont";
+}
+
+.popups .container form #input_cont .form_cont {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 427px;
+}
+
+.popups .container form #input_cont .form_cont h1 {
+  font-size: 20px;
+  color: #2C2D2E;
+}
+
+.popups .container form #input_cont .form_cont input {
+  -webkit-transition: 1s;
+  transition: 1s;
+  padding: 8px;
+  border: 1px solid #919399;
+  font-size: 16px;
+  color: #2C2D2E;
+}
+
+.popups .container form #input_cont .form_cont input.error {
+  border: 1px solid red;
+  background-color: #f7adad;
+}
+
+.popups .container form #input_cont .form_cont input.error::-webkit-input-placeholder {
+  color: red;
+}
+
+.popups .container form #input_cont .form_cont input.error:-ms-input-placeholder {
+  color: red;
+}
+
+.popups .container form #input_cont .form_cont input.error::-ms-input-placeholder {
+  color: red;
+}
+
+.popups .container form #input_cont .form_cont input.error::placeholder {
+  color: red;
+}
+
+.popups .container form #button_cont {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.popups .container form #button_cont button {
+  font-size: 24px;
+  color: #005ff9;
+  padding: 8px 16px;
+  -webkit-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.24);
+          box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.24);
+  border: none;
+  background-color: #fff;
+  border-radius: 8px;
+}
+
+.popups .container form #button_cont button:hover {
+  -webkit-transition: .2s;
+  transition: .2s;
+  -webkit-box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.12);
+          box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.12);
+  color: #418aff;
+}
+
+.popups .container form #First_Name {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: First_Name;
+}
+
+.popups .container form #Last_Name {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: Last_Name;
+}
+
+.popups .container form #E_mail {
+  -ms-grid-row: 1;
+  -ms-grid-column: 4;
+  grid-area: E_mail;
+}
+
+.popups .container form #Telephone_number1 {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: Telephone_number1;
+}
+
+.popups .container form #Telephone_number2 {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: Telephone_number2;
+}
+
+.popups .container form #Telephone_number3 {
+  -ms-grid-row: 6;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: Telephone_number3;
+}
+
+.popups .container form #Position {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: Position_cont;
+}
+
+.popups .container form #Company_Name {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: Company_Name;
+}
+
+.popups .container form #button_cont {
+  -ms-grid-row: 7;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: button_cont;
+}
+
+.popups.hide {
+  display: none;
+}
+
+.popups.show {
+  display: block;
+}
+
+/* header */
+header {
+  margin-top: 64px;
+  margin-bottom: 54px;
+}
+
+header .wrapper .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+header .wrapper .container a {
+  font-size: 16px;
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  color: #005ff9;
+  -webkit-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.24);
+          box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.24);
+}
+
+header .wrapper .container a:hover {
+  -webkit-transition: .4s;
+  transition: .4s;
+  color: #418aff;
+  -webkit-box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.12);
+          box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.12);
+}
+
+/* content */
+#content .accaunt {
+  width: 100%;
+  padding: 18px 36px 54px 18px;
+  -webkit-box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.12);
+          box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.12);
+  margin-bottom: 36px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+  -ms-grid-columns: .5fr .5fr .5fr .7fr .7fr .3fr .7fr .5fr;
+      grid-template-columns: .5fr .5fr .5fr .7fr .7fr .3fr .7fr .5fr;
+      grid-template-areas: "Account_ID First_Name Last_Name E_mail Company_name Position_block Telephone_number buttons_block";
+  grid-column-gap: 16px;
+}
+
+#content .accaunt #Account_ID {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: Account_ID;
+}
+
+#content .accaunt #First_Name {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: First_Name;
+}
+
+#content .accaunt #Last_Name {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: Last_Name;
+}
+
+#content .accaunt #E_mail {
+  -ms-grid-row: 1;
+  -ms-grid-column: 4;
+  grid-area: E_mail;
+}
+
+#content .accaunt #Company_name {
+  -ms-grid-row: 1;
+  -ms-grid-column: 5;
+  grid-area: Company_name;
+}
+
+#content .accaunt #Position {
+  -ms-grid-row: 1;
+  -ms-grid-column: 6;
+  grid-area: Position_block;
+}
+
+#content .accaunt #Telephone_number {
+  -ms-grid-row: 1;
+  -ms-grid-column: 7;
+  grid-area: Telephone_number;
+}
+
+#content .accaunt .info_block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+}
+
+#content .accaunt .info_block h1 {
+  color: #919399;
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+
+#content .accaunt .info_block h2 {
+  color: #2C2D2E;
+  font-size: 16px;
+  margin-bottom: 4px;
+}
+
+#content .accaunt .buttons_block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -ms-grid-row: 1;
+  -ms-grid-column: 8;
+  grid-area: buttons_block;
+}
+
+#content .accaunt .buttons_block a {
+  width: 33px;
+  height: 33px;
+  text-decoration: none;
+}
+
+#content .accaunt .buttons_block a img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+#content .accaunt .buttons_block a.edit {
+  margin-right: 24px;
+}
+
+/* pages */
+.page_number_cont {
+  margin-bottom: 60px;
+}
+
+.page_number_cont a {
+  text-decoration: none;
+  font-weight: 700;
+  color: #2C2D2E;
+  font-size: 24px;
+  margin-right: 12px;
+}
+
+.page_number_cont a:hover {
+  -webkit-transition: .2s;
+  transition: .2s;
+  text-decoration: underline;
+  color: red;
+}
+
+/* media */
+@media (max-width: 1440px) {
+  .container {
+    max-width: 970px;
+  }
+  /* popups */
+  .popups .container form #input_cont {
+    grid-column-gap: 48px;
+  }
+  /* content */
+  #content .accaunt {
+    -ms-grid-columns: .35fr .35fr .35fr .55fr .65fr .3fr .7fr .3fr;
+        grid-template-columns: .35fr .35fr .35fr .55fr .65fr .3fr .7fr .3fr;
+  }
+}
+
+@media (max-width: 992px) {
+  .container {
+    max-width: 750px;
+  }
+  /* popups */
+  .popups .container form #input_cont {
+    grid-column-gap: 36px;
+  }
+  .popups .container form #input_cont .form_cont {
+    width: 300px;
+  }
+  .popups .container form #input_cont .form_cont h1 {
+    margin-right: 6px;
+  }
+  /* content */
+  #content .accaunt {
+    -ms-grid-rows: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    -ms-grid-columns: .5fr 1fr 1fr 1fr;
+        grid-template-columns: .5fr 1fr 1fr 1fr;
+        grid-template-areas: "Account_ID First_Name Last_Name  buttons_block" "Position_block E_mail Company_name Telephone_number ";
+  }
+}
+
+@media (max-width: 767px) {
+  .container {
+    max-width: none;
+    padding: 0 10px;
+  }
+  /* popups */
+  .popups .container {
+    padding: 24px 10px;
+  }
+  .popups .container form #input_cont {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .popups .container form #input_cont .form_cont {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .popups .container form #input_cont .form_cont input {
+    min-width: 100px;
+  }
+  /* content */
+  #content .accaunt {
+    padding: 8px 16px;
+    -ms-grid-rows: .8fr 1fr .3fr;
+        grid-template-rows: .8fr 1fr .3fr;
+    -ms-grid-columns: .8fr 1fr 1fr;
+        grid-template-columns: .8fr 1fr 1fr;
+        grid-template-areas: "Account_ID Company_name buttons_block" "First_Name Last_Name E_mail" "Position_block Telephone_number Telephone_number";
+    grid-row-gap: 16px;
+    grid-column-gap: 16px;
+  }
+}
+
+@media (max-width: 300px) {
+  .container {
+    max-width: none;
+    padding: 0 10px;
+  }
+  /* popups */
+  .popups .container form #input_cont {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .popups .container form #input_cont .form_cont {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .popups .container form #input_cont .form_cont input {
+    min-width: 100px;
+  }
+  /* content */
+  #content .accaunt {
+    padding: 6px;
+    -ms-grid-rows: .8fr 1fr .3fr;
+        grid-template-rows: .8fr 1fr .3fr;
+    -ms-grid-columns: .5fr 1fr 1fr;
+        grid-template-columns: .5fr 1fr 1fr;
+        grid-template-areas: "Account_ID Company_name buttons_block" "First_Name Last_Name E_mail" "Position_block Telephone_number Telephone_number";
+    grid-row-gap: 16px;
+    grid-column-gap: 12px;
+  }
+}
+/*# sourceMappingURL=index.css.map */
