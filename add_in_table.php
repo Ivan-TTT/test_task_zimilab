@@ -2,7 +2,7 @@
 
 $con = new mysqli("localhost", "root", "root", "test_bd") or die($mysqli -> connection_error);
 
-$First_name = $_POST['First_Name'];
+$First_name = $_POST['First_Name']; - 
 $Last_name = $_POST['Last_Name'];
 $E_mail = $_POST['E_mail'];
 
